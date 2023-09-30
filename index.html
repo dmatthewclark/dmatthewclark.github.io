@@ -1,0 +1,64 @@
+<html>
+    <head>
+
+        <title>
+            audiovisualBounceInducingEffect
+        </title>
+
+        <style>
+        #circle {
+            position: relative;
+            background-color: #11064c;
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            border-radius:100px
+        }
+        h1 {
+            text-align: center;
+            line-height: 600px;
+        }
+        #fixed {
+            position:fixed;
+            bottom:0px;
+            right:0px;
+        }
+        </style>
+    </head>
+    <body>
+        <div>
+        <marquee 
+            scrollamount="8"
+            truespeed="3"
+            direction="left"
+            height="0"
+            scrollamount="1"
+            scrolldelay="1"
+            behavior="alternate">
+            <div id="circle" style='width: 150px; height: 150px; background-color: blue'></div>    
+        </marquee>
+        <marquee 
+            scrollamount="8"
+            truespeed="3"
+            direction="right"
+            height="0"
+            scrollamount="1"
+            scrolldelay="1"
+            behavior="alternate">
+            <div id="circle" style='width: 150px; height: 150px; background-color: blue'></div>     
+        </marquee>
+        </div>
+        <h1>
+            <div style="font-size:60px">+</div>
+        </h1>
+        
+        <audio id = "fixed" controls style="height:100%; width:20%;">
+            <source src="audio/billiard.mp4" type="audio/mp4">
+          Your browser does not support the audio element.
+        </audio> 
+        
+    </body>
+    <script>
+
+    </script>
+</html>
