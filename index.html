@@ -1,62 +1,105 @@
+<!DOCTYPE html>
+<!--type "!" and press tab to generate a basic html structured document-->
+
+<!--html is the structure-->
+<!--css is the style-->
+<!--javascript adds functionality-->
+
+<!--
+    css has 3 methods for including style
+    1. inline (set style attributes)
+    2. internal
+    3. external (works the best)
+-->
+
 <html>
+    <!--head includes information about the page-->
     <head>
 
+        <!--text displayed on webpage tab-->
         <title>
-            audiovisualBounceInducingEffect
+            David Matthew Clark
         </title>
+        
+        <!--meta: data about data-->
+        <meta name="description" content="Personal website for David Matthew Clark">
+        <meta name="keywords" content="psychology, neuroscience, research, development">
+        <meta name="author" content="David Matthew Clark">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <style>
-        #circle {
-            position: relative;
-            background-color: #11064c;
-            display: inline-block;
-            border-radius:200px
-        }
-        h1 {
-            text-align: center;
-            line-height: 800px;
-        }
-        #fixed {
-            position:fixed;
-            bottom:0px;
-            right:0px;
-        }
-        </style>
+        <!--external css method-->
+        <link rel="stylesheet" href="style.css">
+        <!--can acquire fonts from Google Fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+        <!--some fun icons from fontawesome.com-->
+        <script src="https://kit.fontawesome.com/a2a4f3a1ac.js" crossorigin="anonymous"></script>
+
+
     </head>
+
+    <!--body includes content within the page-->
     <body>
-        <div>
-        <marquee 
-            scrollamount="8"
-            truespeed="3"
-            direction="left"
-            height="0"
-            scrollamount="1"
-            scrolldelay="1"
-            behavior="alternate">
-            <div id="circle" style='width: 200px; height: 200px; background-color: blue'></div>    
-        </marquee>
-        <marquee 
-            scrollamount="8"
-            truespeed="3"
-            direction="right"
-            height="0"
-            scrollamount="1"
-            scrolldelay="1"
-            behavior="alternate">
-            <div id="circle" style='width: 200px; height: 200px; background-color: blue'></div>     
-        </marquee>
+
+        <!--
+            pseudo-class: a keyword added to a selector that specifies a special state of the selected element(s)
+        -->
+
+        <!--block level elements reserve the entire width of the viewport (unless given the float parameter)-->
+        <div class="flex-container-column top">
+            <!--This is a comment-->
+            <div id="name" class="flex-box">David Matthew Clark</div>
+            <div id="creds" class="flex-box">Graduate of Psychology, Neuroscience & Behaviour</div>
+            
         </div>
-        <h1>
-            <div style="font-size:150px">+</div>
-        </h1>
+
+        <div class="flex-container-row nav">
+                
+            <div class="flex-box">
+                <i class="fa-solid fa-house"></i> 
+                Home
+            </div>
+                    
+            <div class="flex-box">
+                <a style="text-decoration:none" href="research/research.html" target="_blank" title="Check out my research!">
+                    <i class="fa-solid fa-book-open-reader"></i> 
+                    Research
+                </a>
+            </div>
+
+            <div class="flex-box">
+                <a style="text-decoration:none" href="development/development.html" target="_blank" title="Check out my game development!">
+                    <i class="fa-solid fa-gamepad"></i>
+                    Development
+                </a>
+            </div>
+        </div>
+
+        <br>
+
+        <!--    
+            float: positions an element to the left or right of a container
+                    
+                i.e., this is popular for wrapping elements around images.
+        -->
+
+        <!-- type "Lorem" and press tab to generate Lorem paragraph.-->
+        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
+        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
+
+
+        <a href="mailto:dmatthewclark@gmail.com" target=_self title="Click here to email me">
+            Email
+        </a>
         
-        <audio id = "fixed" controls style="height:100%; width:20%;">
-            <source src="audio/billiard.mp4" type="audio/mp4">
-          Your browser does not support the audio element.
-        </audio> 
+        <br>
         
+
+        <img src="img/blue.png" height="300" alt="This is a picture of a blue ball" title="blue ball">
+
     </body>
     <script>
 
     </script>
 </html>
+
