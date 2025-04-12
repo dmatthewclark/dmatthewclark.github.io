@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <!--type "!" and press tab to generate a basic html structured document-->
+<!-- type "Lorem" and press tab to generate Lorem paragraph.-->
 
 <!--html is the structure-->
 <!--css is the style-->
@@ -15,12 +16,12 @@
 <html>
     <!--head includes information about the page-->
     <head>
-
         <!--text displayed on webpage tab-->
-        <title>
-            David Matthew Clark
-        </title>
+        <title>David Matthew Clark</title>
         
+        <!--icon displayed on webpage tab-->
+        <link rel="icon" href="img/brain-solid.svg" type="image/x-icon">
+
         <!--meta: data about data-->
         <meta name="description" content="Personal website for David Matthew Clark">
         <meta name="keywords" content="psychology, neuroscience, research, development">
@@ -34,7 +35,6 @@
 
         <!--some fun icons from fontawesome.com-->
         <script src="https://kit.fontawesome.com/a2a4f3a1ac.js" crossorigin="anonymous"></script>
-
 
     </head>
 
@@ -55,24 +55,35 @@
 
         <div class="flex-container-row nav">
                 
-            <div class="flex-box">
-                <i class="fa-solid fa-house"></i> 
-                Home
-            </div>
-                    
-            <div class="flex-box">
-                <a style="text-decoration:none" href="research/research.html" target="_blank" title="Check out my research!">
-                    <i class="fa-solid fa-book-open-reader"></i> 
-                    Research
-                </a>
-            </div>
 
-            <div class="flex-box">
-                <a style="text-decoration:none" href="development/development.html" target="_blank" title="Check out my game development!">
-                    <i class="fa-solid fa-gamepad"></i>
-                    Development
-                </a>
-            </div>
+            <button id="home-button" class="nav-button flex-box" title="Return to the start">
+                <i class="fa-solid fa-house"></i> 
+                <div class="nav-text">Home</div>
+            </button>
+
+            <button id="about-button" class="nav-button flex-box" title="Learn about me">
+                <i class="fa-solid fa-user-tie"></i>
+                <div class="nav-text">About</div>
+            </button>
+                    
+            <button id="research-button" class="nav-button flex-box" title="My research experience">
+                <i class="fa-solid fa-book-open-reader"></i> 
+                <div class="nav-text">Research</div>
+            </button>
+
+            <button id="development-button" class="nav-button flex-box" title="My game development experience">
+                <i class="fa-solid fa-gamepad"></i>
+                <div class="nav-text">Development</div>
+            </button>
+        </div>
+
+        <!--
+            HOME
+        -->
+        <div id="home" class="flex-container-column">
+            <h3>Home</h3>
+            <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
+            <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
         </div>
 
         <br>
@@ -83,10 +94,38 @@
                 i.e., this is popular for wrapping elements around images.
         -->
 
-        <!-- type "Lorem" and press tab to generate Lorem paragraph.-->
-        <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
-        <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
+        <!--
+            ABOUT
+        -->
+        <div id="about" class="flex-container-column section">
+            <h3>About</h3>
+            <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
+            <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
+        </div>
 
+        <br>
+
+        <!--
+            RESEARCH
+        -->
+        <div id="research" class="flex-container-column section">
+            <h3>Research</h3>
+            <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
+            <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
+        </div>
+
+        <br>
+
+        <!--
+            DEVELOPMENT
+        -->
+        <div id="development" class="flex-container-column section">
+            <h3>Development</h3>
+            <p id="p1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
+            <p id="p2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit adipisci ipsa esse aliquid iste possimus quod atque soluta voluptatem alias maiores quo, nobis blanditiis voluptates est veniam. Nesciunt, provident ipsam?</p>
+        </div>
+
+        <br>
 
         <a href="mailto:dmatthewclark@gmail.com" target=_self title="Click here to email me">
             Email
@@ -94,9 +133,16 @@
         
         <br>
         
-
+        
         <img src="img/blue.png" height="300" alt="This is a picture of a blue ball" title="blue ball">
+        
+        <button id="to-top-button" class="hidden-button">
+            go to top
+        </button> 
 
+        <!--reference your javascript files-->
+        <script src="scripts/navBar.js"></script>
+        <script src="scripts/scrollToTop.js"></script>
     </body>
     <script>
 
