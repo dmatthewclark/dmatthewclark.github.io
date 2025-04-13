@@ -1,4 +1,3 @@
-const home = document.getElementById("home");
 const about = document.getElementById("about");
 const research = document.getElementById("research");
 const development = document.getElementById("development");
@@ -17,21 +16,21 @@ homeButton.onclick=()=>{
 
 aboutButton.onclick=()=>{
     window.scroll({
-        top: window.scrollY + about.getBoundingClientRect().top,
+        top: window.scrollY + about.getBoundingClientRect().top - 100,
         behavior:"smooth",
     });
 }
 
 researchButton.onclick=()=>{
     window.scroll({
-        top: window.scrollY + research.getBoundingClientRect().top,
+        top: window.scrollY + research.getBoundingClientRect().top - 100,
         behavior:"smooth",
     });
 }
 
 developmentButton.onclick=()=>{
     window.scroll({
-        top: window.scrollY + development.getBoundingClientRect().top,
+        top: window.scrollY + development.getBoundingClientRect().top - 100,
         behavior:"smooth",
     });
 }

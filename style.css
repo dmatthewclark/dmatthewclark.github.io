@@ -11,30 +11,10 @@
 }
 
 body{
-    margin-top: 40px;
     
     background: linear-gradient(black, skyblue);
     background-repeat: no-repeat;
     background-attachment: fixed;
-}
-
-/* period references HTML class="" */
-.top{
-    text-align:center;
-}
-
-/* hashtag references HTML ID="" */
-#name{
-    font-size: 42px;
-
-    text-shadow: 3px 3px 0px gray;
-    max-width: 500px;
-
-}
-
-#creds{
-    font-size: 12px;
-    max-width: 500px;
 }
 
 .nav{
@@ -47,11 +27,7 @@ body{
     */
 
     font-size: 20px;
-
     height: 50px;
-    margin: 20px;
-    margin-left: auto;
-    margin-right: auto;
     background-color:black;
 
     position: sticky;
@@ -59,13 +35,16 @@ body{
 }
 
 .nav-button{
+    flex-grow: 1;
+    flex-shrink: 1;
+
     max-width: 200px; /* limit flex gorw */
     min-width: 10px; /* limit flex shrink */
 
     font-size: 20px;
 
     background: none;
-    border: 5px solid white;
+    border: none;
 }
 
 /* colon references pseudo classes */
@@ -78,6 +57,38 @@ body{
     .nav-text{
         color:skyblue;
     }
+}
+
+/* dynamically change type of flex based on width of screen being used */
+@media(max-width: 575px){
+    .nav-text{
+        display: none;
+        position: none;
+    }
+}
+
+
+/* period references HTML class="" */
+.top{
+    height: calc(100vh - 50px);
+    text-align: center;
+}
+
+/* hashtag references HTML ID="" */
+#name{
+    flex-grow: 0;
+    flex-shrink: 1;
+    font-size: 82px;
+
+    text-shadow: 5px 5px 0px black;
+    max-width: 800px;
+}
+
+#creds{
+    flex-grow: 0;
+    flex-shrink: 1;
+    font-size: 22px;
+    max-width: 800px;
 }
 
 .flex-container-column{
@@ -95,21 +106,11 @@ body{
 .flex-container-row{
     display: flex;
     flex-direction: row;
-    gap: 0px;
-    column-gap: 0px;
-    row-gap: 0px;
-    flex-wrap: wrap;
+    row-gap: 20px;
+    flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     align-content: center;
-}
-
-/* dynamically change type of flex based on width of screen being used */
-@media(max-width: 575px){
-    .nav-text{
-        display: none;
-        position: none;
-    }
 }
 
 .fa-solid{
@@ -117,12 +118,20 @@ body{
     flex-grow: 0;
 }
 
-.flex-box{
+.flex-box-row{
     flex-grow: 1; /* allow getting bigger */
     flex-shrink: 1; /* allow getting smaller */
 
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.flex-box-column{
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
@@ -146,21 +155,29 @@ p{
 */
 
 .section{
-    height: 800px;
+    margin: 50px;
+    padding: 25px;
+    flex-grow: 1;
+    flex-shrink: 1;
+
+    gap: 20px;
+
+    max-width: 800px;
+    min-width: 100px;
+    font-size: 40px;
+
+    border: 5px solid skyblue;
+    border-radius: 10px;
+
+    background-color: black;
 }
 
-#p1{
-    border: 5px solid;
-    width:250px;
+p{
+    text-indent: 50px;
+    
     font-size: 22px;
-    background: greenyellow;
-}
 
-#p2{
-    border: 5px solid;
-    width: 250px;
-    font-size: 22px;
-    background: blueviolet;
+    padding: 10px;
 }
 
 #to-top-button{
