@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Research</title>
+    <title>Blog</title>
     <link rel="icon" href="../img/brain-solid.svg" type="image/x-icon">
 
     <meta charset="UTF-8">
-    <meta name="description" content="Research by David Matthew Clark">
+    <meta name="description" content="Blog by David Matthew Clark">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="psychology, neuroscience, behaviour, behavior, research, statistics, analysis, data">
+    <meta name="keywords" content="game development, programming, games, video games">
     <meta name="author" content="David Matthew Clark">
 
     <link rel="stylesheet" href="../style.css">
@@ -23,6 +23,7 @@
     <!--
         MAIN NAVIGATION BAR
     -->
+
     <div class="flex-container-row nav main-nav">
         <button id="home-button" class="nav-button flex-box-row" title="Return to the start">
             <a href="../index.html" class="flex-box-row">
@@ -32,14 +33,14 @@
         </button>
 
         <button id="blog-button" class="nav-button flex-box-row" title="Learn about me">
-            <a href="../blog/blog.html" class="flex-box-row">
+            <a href="blog.html" class="flex-box-row">
                 <i class="fa-solid fa-pen"></i>
                 <div class="nav-text">Blog</div>
             </a>
         </button>
                 
         <button id="research-paper" class="nav-button flex-box-row" title="My research experience">
-            <a href="research.html" class="flex-box-row">
+            <a href="../research/research.html" class="flex-box-row">
                 <i class="fa-solid fa-book-open-reader"></i> 
                 <div class="nav-text">Research</div>
             </a>
@@ -57,6 +58,10 @@
         </button>
     </div>
 
+    <!--
+        TOP SECTION
+    -->
+
     <div class="flex-container-column top">
         
     </div>
@@ -69,19 +74,19 @@
             <i id="top-button-icon" class="fa-solid fa-arrows-up-to-line"></i>
         </button>
         
-        <button id="psychology-button" class="nav-button flex-box-row" title="My research in psychology">
-            <i class="fa-solid fa-brain"></i>
-            <div class="nav-text">Psychology</div>
+        <button id="general-button" class="nav-button flex-box-row" title="Read about my thoughts">
+            <i class="fa-solid fa-comment"></i>
+            <div class="nav-text">General</div>
         </button>
 
-        <button id="neuroscience-button" class="nav-button flex-box-row" title="My research in neuroscience">
-            <i class="fa-solid fa-bolt"></i>
-            <div class="nav-text">Neuroscience</div>
-        </button>     
+        <button id="hobbies-button" class="nav-button flex-box-row" title="Read about my hobbies">
+            <i class="fa-solid fa-volleyball"></i>
+            <div class="nav-text">Hobbies</div>
+        </button>
 
-        <button id="behaviour-button" class="nav-button flex-box-row" title="My research on behaviour">
-            <i class="fa-solid fa-person-walking"></i>
-            <div class="nav-text">Behaviour</div>
+        <button id="events-button" class="nav-button flex-box-row" title="Read about my experiences">
+            <i class="fa-solid fa-shoe-prints"></i>
+            <div class="nav-text">Events</div>
         </button>
 
         <button id="drop-down-button" class="nav-button flex-box-row" title="Drop-down menu">
@@ -89,7 +94,7 @@
         </button>
     </div>
 
-    <h1 id="psychology" class="section-title">Psychology</h1>
+    <h1 id="general" class="section-title">General</h1>
     <div class="flex-container-row portfolio-container">
         <div class="portfolio-box">
 
@@ -112,7 +117,7 @@
         </div>
     </div>
 
-    <h1 id="neuroscience" class="section-title">Neuroscience</h1>
+    <h1 id="hobbies" class="section-title">Hobbies</h1>
     <div class="flex-container-row portfolio-container">
         <div class="portfolio-box">
 
@@ -135,7 +140,7 @@
         </div>
     </div>
 
-    <h1 id="behaviour" class="section-title">Behaviour</h1>
+    <h1 id="events" class="section-title">Events</h1>
     <div class="flex-container-row portfolio-container last-element">
         <div class="portfolio-box">
 
@@ -181,8 +186,7 @@
         </div>
     </div>
 
-    <script src="scripts/researchNavBar.js"></script>
+    <script src="scripts/blogNavBar.js"></script>
     <script src="../scripts/navBar.js"></script>
-
 </body>
 </html>

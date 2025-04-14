@@ -1,36 +1,53 @@
-const about = document.getElementById("about");
-const research = document.getElementById("research");
-const development = document.getElementById("development");
+const pageNavBar = document.getElementById("page-nav");
 
-const homeButton = document.getElementById("home-button");
-const aboutButton = document.getElementById("about-button");
-const researchButton = document.getElementById("research-button");
-const developmentButton = document.getElementById("development-button");
+const topButton = document.getElementById("top-button");
 
-homeButton.onclick=()=>{
+const dropDownButton = document.getElementById("drop-down-button");
+const dropDownIcon = document.getElementById('drop-down-icon');
+
+const topButtonIcon = document.getElementById("top-button-icon");
+
+/* can write logs to console to debug code */
+
+topButton.onclick=()=>{
     window.scroll({
         top:0,
         behavior:"smooth",
     });
 }
 
-aboutButton.onclick=()=>{
-    window.scroll({
-        top: window.scrollY + about.getBoundingClientRect().top - 100,
-        behavior:"smooth",
-    });
+
+dropDownButton.addEventListener('click', function(){
+    if(window.getComputedStyle(pageNavBar).getPropertyValue('top') === '50px'){
+        dropDownIcon.style.animation = "rotateDown 0.5s";
+        dropDownIcon.style.transform = "rotate(90deg)";
+        pageNavBar.style.animation = "slideUp 0.5s";
+        pageNavBar.style.top = '0px';
+    }else{
+        dropDownIcon.style.animation = "rotateUp 0.5s";
+        dropDownIcon.style.transform = "rotate(-90deg)";
+        pageNavBar.style.animation = "slideDown 0.5s";
+        pageNavBar.style.top = '50px';
+    }
+})
+
+/* callback function referencing new function */
+window.onscroll = ()=>{
+    scrollFunction();
 }
 
-researchButton.onclick=()=>{
-    window.scroll({
-        top: window.scrollY + research.getBoundingClientRect().top - 100,
-        behavior:"smooth",
-    });
-}
-
-developmentButton.onclick=()=>{
-    window.scroll({
-        top: window.scrollY + development.getBoundingClientRect().top - 100,
-        behavior:"smooth",
-    });
+/* custom function */
+function scrollFunction(){
+    if(document.body.scrollTop > 10 || document.documentElement.scrollTop > 10){
+        topButtonIcon.style.visibility = "visible";
+    }else{
+        topButtonIcon.style.visibility = "hidden";
+    }
+    if(document.body.scrollTop > window.innerHeight - 100 || document.documentElement.scrollTop > window.innerHeight - 100){
+        dropDownIcon.style.visibility = "visible";
+        console.log("true");
+    }else{
+        dropDownIcon.style.visibility = "hidden";
+        console.log("false");
+    }
 }

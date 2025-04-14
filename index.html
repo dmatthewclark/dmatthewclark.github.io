@@ -45,10 +45,55 @@
             pseudo-class: a keyword added to a selector that specifies a special state of the selected element(s)
         -->
         
-        <div class="flex-container-row nav">
+        <div class="flex-container-row nav main-nav">
             <button id="home-button" class="nav-button flex-box-row" title="Return to the start">
-                <i class="fa-solid fa-house"></i> 
-                <div class="nav-text">Home</div>
+                <a href="index.html" class="flex-box-row">
+                    <i class="fa-solid fa-house"></i> 
+                    <div class="nav-text">Home</div>
+                </a>
+            </button>
+
+            <button id="blog-button" class="nav-button flex-box-row" title="Learn about me">
+                <a href="blog/blog.html" class="flex-box-row">
+                    <i class="fa-solid fa-pen"></i>
+                    <div class="nav-text">Blog</div>
+                </a>
+            </button>
+                    
+            <button id="research-paper" class="nav-button flex-box-row" title="My research experience">
+                <a href="research/research.html" class="flex-box-row">
+                    <i class="fa-solid fa-book-open-reader"></i> 
+                    <div class="nav-text">Research</div>
+                </a>
+            </button>
+
+            <button id="portfolio-button" class="nav-button flex-box-row" title="My game development experience">
+                <a href="portfolio/portfolio.html" class="flex-box-row">
+                    <i class="fa-solid fa-gamepad"></i>
+                    <div class="nav-text">Portfolio</div>
+                </a>
+            </button>
+
+            <button id="navigation-button" class="nav-button flex-box-row" title="Drop-down menu">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+
+        <!--
+            TOP
+        -->
+        <!--block level elements reserve the entire width of the viewport (unless given the float parameter)-->
+        <div class="flex-container-column top">
+            <!--This is a comment-->
+            <div id="name">David Matthew Clark</div>
+            <div id="creds">Graduate of Psychology, Neuroscience & Behaviour</div>
+            
+        </div>
+
+        <div id="page-nav" class="flex-container-row nav">
+            <button id="top-button" class="nav-button flex-box-row" title="Return to the top">
+                <i id="top-button-icon" class="fa-solid fa-arrows-up-to-line"></i>
             </button>
 
             <button id="about-button" class="nav-button flex-box-row" title="Learn about me">
@@ -57,29 +102,21 @@
             </button>
                     
             <button id="research-button" class="nav-button flex-box-row" title="My research experience">
-                <i class="fa-solid fa-book-open-reader"></i> 
-                <div class="nav-text">Research</div>
+                <i class="fa-solid fa-brain"></i>
+                <div class="nav-text">Psychology</div>
             </button>
 
             <button id="development-button" class="nav-button flex-box-row" title="My game development experience">
                 <i class="fa-solid fa-gamepad"></i>
                 <div class="nav-text">Development</div>
             </button>
+
+            <button id="drop-down-button" class="nav-button flex-box-row" title="Drop-down menu">
+                <i id="drop-down-icon" class="fa-solid fa-chevron-right"></i>
+            </button>
         </div>
 
         <div class="flex-container-column">
-            
-            <!--
-                TOP
-            -->
-            <!--block level elements reserve the entire width of the viewport (unless given the float parameter)-->
-            <div class="flex-container-column top">
-                <!--This is a comment-->
-                <div id="name">David Matthew Clark</div>
-                <div id="creds">Graduate of Psychology, Neuroscience & Behaviour</div>
-                
-            </div>
-
             <!--    
                 float: positions an element to the left or right of a container
                         
@@ -134,7 +171,7 @@
             <!--
                 DEVELOPMENT
             -->
-            <div class="flex-container-column section">
+            <div class="flex-container-column section last-element">
                 <h3 id="development">Game Development</h3>
                 <p>
                     I enjoy a wide variety of genres in video games. 
@@ -153,22 +190,39 @@
             </div>
         </div>
 
-        <a href="mailto:dmatthewclark@gmail.com" target=_self title="Click here to email me">
-            Email
-        </a>
+        <div id="footer" class="flex-container-row">
+            <div style="width: 100px"></div>
+
+            <h5 id="footer-note">
+                Created by David Matthew Clark
+            </h5>
+
+            <div id="contact" class="flex-container-column">
+                <a href="mailto:dmatthewclark@gmail.com" target=_self title="Click here to email me">
+                    <i class="fa-solid fa-envelope"></i>
+                    Email
+                </a>
+                <a href="https://github.com/dmatthewclark" target=_blank title="Click here for my GitHub">
+                    <i class="fa-brands fa-github"></i>
+                    GitHub
+                </a>
+                <a href="https://devmatman.itch.io/" target=_blank title="Click here for my Itch page">
+                    <i class="fa-brands fa-itch-io"></i>
+                    Itch.io
+                </a>
+                
+            </div>
+
+        </div>
         
-        <br>
-        
-        
+        <!-- best practice to include alt and title parameters for navigation from disabled
         <img src="img/blue.png" height="300" alt="This is a picture of a blue ball" title="blue ball">
-        
-        <button id="to-top-button" class="hidden-button">
-            go to top
-        </button> 
+        -->
 
         <!--reference your javascript files-->
         <script src="scripts/navBar.js"></script>
-        <script src="scripts/scrollToTop.js"></script>
+        <script src="scripts/homeNavBar.js"></script>
+        
     </body>
     <script>
 

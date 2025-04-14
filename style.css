@@ -18,6 +18,16 @@ body{
 }
 
 .nav{
+    font-size: 20px;
+    height: 50px;
+    background-color:black;
+
+    flex-wrap: nowrap;
+
+    z-index: 2;
+}
+
+.main-nav{
     /*  
         static: normal state
         relative: move element relative to a point of origin (default at top left corner)
@@ -25,27 +35,52 @@ body{
         fixed: stay in position of your viewport (even if you scroll)
         sticky: will stick to the edge of the viewport if scrolling past
     */
+    position: sticky;
+    top: 0px;
+}
 
-    font-size: 20px;
-    height: 50px;
-    background-color:black;
+#page-nav{
 
     position: sticky;
     top: 0px;
+}
+
+@keyframes slideDown{
+    from{
+        top: 0px;
+    }
+    to{
+        top: 50px;
+    }
+}
+
+@keyframes slideUp{
+    from{
+        top: 50px;
+    }
+    to{
+        top: 0px;
+    }
 }
 
 .nav-button{
     flex-grow: 1;
     flex-shrink: 1;
 
-    max-width: 200px; /* limit flex gorw */
-    min-width: 10px; /* limit flex shrink */
+    max-width: 200px; /* limit flex grow */
+    min-width: 20px; /* limit flex shrink */
 
     font-size: 20px;
 
     background: none;
     border: none;
+
+    a{
+        text-decoration: none;
+    }
 }
+
+
 
 /* colon references pseudo classes */
 .nav-button:hover{
@@ -59,6 +94,45 @@ body{
     }
 }
 
+#top-button{
+    flex-grow: 0.5;
+}
+
+#top-button-icon{
+    visibility: hidden;
+}
+
+#drop-down-button{
+    flex-grow: 0.5;
+}
+
+#drop-down-icon{
+    visibility: hidden;
+    transform: rotate(90deg);
+}
+
+@keyframes rotateUp{
+    from{
+        transform: rotate(90deg);
+    }
+    to{
+        transform: rotate(-90deg);
+    }
+}
+
+@keyframes rotateDown{
+    from{
+        transform: rotate(-90deg);
+    }
+    to{
+        transform: rotate(90deg);
+    }
+}
+
+button:active{
+    transform: scale(0.96);
+}
+
 /* dynamically change type of flex based on width of screen being used */
 @media(max-width: 575px){
     .nav-text{
@@ -70,7 +144,7 @@ body{
 
 /* period references HTML class="" */
 .top{
-    height: calc(100vh - 50px);
+    height: calc(100vh - 100px);
     text-align: center;
 }
 
@@ -106,8 +180,7 @@ body{
 .flex-container-row{
     display: flex;
     flex-direction: row;
-    row-gap: 20px;
-    flex-wrap: nowrap;
+    gap: 20px;
     justify-content: center;
     align-items: center;
     align-content: center;
@@ -121,6 +194,8 @@ body{
 .flex-box-row{
     flex-grow: 1; /* allow getting bigger */
     flex-shrink: 1; /* allow getting smaller */
+
+    gap: 10px;
 
     display: flex;
     flex-direction: row;
@@ -155,7 +230,10 @@ p{
 */
 
 .section{
-    margin: 50px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 25px;
     flex-grow: 1;
     flex-shrink: 1;
@@ -180,28 +258,103 @@ p{
     padding: 10px;
 }
 
-#to-top-button{
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-
-    background: blue;
-    color: white;
-    opacity: 0.5;
-
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    box-shadow: 5px 2px 4px rgba(0, 0, 0, 0.3);
-
-    transition: all 0.2s linear;
+.last-element{
+    margin-bottom: 20vh;
 }
 
-#to-top-button:hover{
-    opacity: 1;
+#footer{
+    justify-content: space-evenly;
+    background-color: black;
+    height: 100px;
+}
+
+#contact{
+    width: 100px;
+    align-items: flex-start;
 }
 
 .hidden {
     display: none;
+}
+
+/*
+    PORTFOLIO
+*/
+
+.portfolio-container{
+    margin-top: 50px;
+
+    flex-wrap: wrap;
+    gap: 50px;
+
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.portfolio-box{
+    height: 300px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    flex-wrap: nowrap;
+
+    border: 2px solid black;
+    
+    overflow: hidden;
+
+    text-decoration: none;
+
+    img{
+        scale: 1.5;
+        height: 200px;
+        transform: translateY(-10px);
+    }
+}
+
+.portfolio-box:hover{
+    transform: scale(1.05);
+    
+}
+
+.portfolio-box-context{
+    height: 100px;
+    width: 300px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+
+    background-color:black;
+
+    gap: 5px;
+
+    padding: 10px;
+
+    z-index: 1;
+
+    .title{
+        font-size: 18;
+    }
+    .desc{
+        font-size: 12;
+    }
+    .date{
+        font-size: 12;
+        color: gold;
+    }
+}
+
+.section-title{
+    margin-top: 50px;
+    color: black;
+
+    text-align: center;
+
+    
 }
