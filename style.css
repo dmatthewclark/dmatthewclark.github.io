@@ -19,15 +19,33 @@ body{
 
 .nav{
     font-size: 20px;
-    height: 50px;
+    min-height: 50px;
     background-color:black;
 
     flex-wrap: nowrap;
+    flex: auto;
 
     z-index: 2;
 }
 
-.main-nav{
+#main-nav-container{
+    position: sticky;
+    top: 0px;
+
+    gap: 0px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: center;
+}
+
+.side-nav-bar{
+    flex: auto;
+}
+
+#main-nav{
     /*  
         static: normal state
         relative: move element relative to a point of origin (default at top left corner)
@@ -35,12 +53,45 @@ body{
         fixed: stay in position of your viewport (even if you scroll)
         sticky: will stick to the edge of the viewport if scrolling past
     */
-    position: sticky;
-    top: 0px;
+    max-height: 300px;
+
+    min-height: 50px;
+
+    flex: auto;
+
+    max-width: 100vw;
+
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+
+    z-index: 3;
+}
+
+@keyframes mainSlideDown{
+    from{
+        max-width: 100vw;
+    }
+    to{
+        max-width: 150px;
+    }
+}
+
+@keyframes mainSlideUp{
+    from{
+        max-width: 150px;
+    }
+    to{
+        max-width: 100vw;
+    }
 }
 
 #page-nav{
-
+    max-height: 50px;
     position: sticky;
     top: 0px;
 }
@@ -64,8 +115,7 @@ body{
 }
 
 .nav-button{
-    flex-grow: 1;
-    flex-shrink: 1;
+    flex: auto;
 
     max-width: 200px; /* limit flex grow */
     min-width: 20px; /* limit flex shrink */
@@ -95,7 +145,7 @@ body{
 }
 
 #top-button{
-    flex-grow: 0.5;
+    flex: initial;
 }
 
 #top-button-icon{
@@ -103,12 +153,16 @@ body{
 }
 
 #drop-down-button{
-    flex-grow: 0.5;
+    flex: initial;
 }
 
 #drop-down-icon{
     visibility: hidden;
     transform: rotate(90deg);
+}
+
+#navigation-button{
+    flex: initial;
 }
 
 @keyframes rotateUp{
@@ -133,14 +187,15 @@ button:active{
     transform: scale(0.96);
 }
 
-/* dynamically change type of flex based on width of screen being used */
-@media(max-width: 575px){
-    .nav-text{
-        display: none;
-        position: none;
-    }
+.nav-text{
+    display: flex;
+    position: static;
 }
 
+.main-nav-text{
+    display: flex;
+    position: static;
+}
 
 /* period references HTML class="" */
 .top{
@@ -150,8 +205,7 @@ button:active{
 
 /* hashtag references HTML ID="" */
 #name{
-    flex-grow: 0;
-    flex-shrink: 1;
+    flex: initial;
     font-size: 82px;
 
     text-shadow: 5px 5px 0px black;
@@ -159,8 +213,7 @@ button:active{
 }
 
 #creds{
-    flex-grow: 0;
-    flex-shrink: 1;
+    flex: initial;
     font-size: 22px;
     max-width: 800px;
 }
@@ -187,13 +240,11 @@ button:active{
 }
 
 .fa-solid{
-    flex-shrink: 1;
-    flex-grow: 0;
+    flex: initial;
 }
 
 .flex-box-row{
-    flex-grow: 1; /* allow getting bigger */
-    flex-shrink: 1; /* allow getting smaller */
+    flex: auto;
 
     gap: 10px;
 
@@ -311,8 +362,7 @@ p{
 
     img{
         scale: 1.5;
-        height: 200px;
-        transform: translateY(-10px);
+        height: 200px;        
     }
 }
 
