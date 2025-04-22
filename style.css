@@ -402,14 +402,7 @@ p{
 
     z-index: 1;
 
-    .title{
-        font-size: 18;
-    }
-    .desc{
-        font-size: 12;
-    }
     .date{
-        font-size: 12;
         color: gold;
     }
 }
@@ -427,18 +420,82 @@ p{
 }
 
 .blog-box-context{
-    background-color: white;
-    color: black;
-
-    height: 250px;
+    background-color: black;
 
     .title{
-        color: black;
+        font-size: 28px;
     }
+
+    .date{
+        font-size: 12px;
+    }
+
     .desc{
+        padding-right: 10px;
+        font-size: 20px;
         color: black;
+        
+    }
+
+    .foot{
+        padding: 10px;
+        color: red;
+        margin: auto;
+    }
+    .foot:hover{
+        border: 1px solid red;
     }
 }
+
+
+#page-top{
+    margin-bottom: 10vh;
+
+    height: 200px;
+    width: 100%;
+
+    position: sticky;
+    top: 15vh;
+
+    text-align: center;
+    background-color: none;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+
+    overflow: hidden;
+
+    z-index: -1;
+
+
+    .page-title{
+        position:absolute;
+
+        text-align: center;
+
+        font-size: 42px;
+        font-weight: bold;
+        color: black;
+        text-shadow: 1px 1px 0px white;
+
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    #panning-image{
+        position: absolute;
+        width: 100vw;
+
+        top: 0px;
+        left: 0px;
+    }
+}
+.page-content{
+    height: 100vh;
+    width: 100%;
+    background-color: black;
+}
+
 
 /*
     PORTFOLIO
@@ -455,4 +512,8 @@ p{
 .portfolio-box-context{
     background-color: black;
     height: 100px;
+
+    .date{
+        font-size: 12;
+    }
 }
