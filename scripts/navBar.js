@@ -8,6 +8,7 @@ const dropDownIcon = document.getElementById('drop-down-icon');
 const topButtonIcon = document.getElementById("top-button-icon");
 const mainNavBar = document.getElementById("main-nav");
 const navigationButton = document.getElementById("navigation-button");
+const navigationButtonIcon = document.getElementById("nav-button-icon");
 const navText = document.getElementsByClassName("nav-text");
 const mainNavText = document.getElementsByClassName("main-nav-text");
 
@@ -23,12 +24,12 @@ topButton.onclick=()=>{
 
 dropDownButton.addEventListener('click', function(){
     if(window.getComputedStyle(pageNavBar).getPropertyValue('top') === '50px'){
-        dropDownIcon.style.animation = "rotateDown 0.5s";
+        dropDownIcon.style.animation = "rotate180 0.5s";
         dropDownIcon.style.transform = "rotate(90deg)";
         pageNavBar.style.animation = "slideUp 0.5s";
         pageNavBar.style.top = '0px';
     }else{
-        dropDownIcon.style.animation = "rotateUp 0.5s";
+        dropDownIcon.style.animation = "rotate-180 0.5s";
         dropDownIcon.style.transform = "rotate(-90deg)";
         pageNavBar.style.animation = "slideDown 0.5s";
         pageNavBar.style.top = '50px';
@@ -84,13 +85,31 @@ window.addEventListener("resize", updateNavBar);
 navigationButton.addEventListener('click', function(){
     if(navOpen === true){
         navOpen = false;
-        mainNavBar.style.animation = "mainSlideUp 1s";
-        mainNavBar.style.maxWidth = "100vw";
+        mainNavBar.style.flexDirection = "row";
+        mainNavBar.style.alignItems = "center";
+        mainNavBar.style.paddingTop = "0px";
+        mainNavBar.style.paddingBottom = "0px";
+        mainNavBar.style.animation = "mainHeightShrink 1s";
+        mainNavBar.style.height = "50px";
+        mainNavBar.style.zIndex = "2";
+        navigationButtonIcon.style.animation = "rotate90 0.5s";
+        navigationButtonIcon.style.transform = "rotate(0deg)";
+        navigationButton.style.marginLeft = "0px";
+        navigationButton.style.marginRight = "0px";
         updateNavBar();
     }else{ // navigation menu is open
         navOpen = true;
-        mainNavBar.style.animation = "mainSlideDown 1s";
-        mainNavBar.style.maxWidth = "150px";
+        mainNavBar.style.flexDirection = "column";
+        mainNavBar.style.alignItems = "flex-start";
+        mainNavBar.style.paddingTop = "20px";
+        mainNavBar.style.paddingBottom = "20px";
+        mainNavBar.style.animation = "mainHeightExpand 0.2s";
+        mainNavBar.style.height = "300px";
+        mainNavBar.style.zIndex = "3";
+        navigationButtonIcon.style.animation = "rotate-90 0.5s";
+        navigationButtonIcon.style.transform = "rotate(-90deg)";
+        navigationButton.style.marginLeft = "auto";
+        navigationButton.style.marginRight = "auto";
         updateNavBar();
     }
 })
