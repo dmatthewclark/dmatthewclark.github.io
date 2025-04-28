@@ -324,6 +324,12 @@ p{
     padding: 10px;
 }
 
+ol{
+    font-size: 22px;
+    padding: 10px;
+    padding-left: 50px;
+}
+
 .last-element{
     margin-bottom: 20vh;
 }
