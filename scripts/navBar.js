@@ -63,7 +63,7 @@ navigationButton.addEventListener('click', function(){
         mainNavBar.style.paddingBottom = "0px";
         mainNavBar.style.animation = "mainHeightShrink 1s";
         mainNavBar.style.height = "50px";
-        mainNavBar.style.zIndex = "2";
+        mainNavBar.style.zIndex = "10";
         navigationButtonIcon.style.animation = "rotate90 1s";
         navigationButtonIcon.style.transform = "rotate(0deg)";
         navigationButton.style.marginLeft = "0px";
@@ -77,7 +77,7 @@ navigationButton.addEventListener('click', function(){
         mainNavBar.style.paddingBottom = "20px";
         mainNavBar.style.animation = "mainHeightExpand 0.2s";
         mainNavBar.style.height = "300px";
-        mainNavBar.style.zIndex = "3";
+        mainNavBar.style.zIndex = "12";
         navigationButtonIcon.style.animation = "rotate-90 1s";
         navigationButtonIcon.style.transform = "rotate(-90deg)";
         navigationButton.style.marginLeft = "auto";
