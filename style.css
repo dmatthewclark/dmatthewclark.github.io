@@ -246,36 +246,53 @@ button:active{
 #blog-top{
     background: linear-gradient(red, orange);
 
-    #net{
-        bottom: 20vh;
-        transform: scale(1.4);
+    #title{
+        position: relative;
+        margin-bottom: 70vh;
+        font-size: 80px;
+        color: white;
         z-index: 3;
     }
 
-    #setter{
-        bottom: 15vh;
-        transform: scale(1.3);
-        left: 60vw;
+    #net{
+        padding-bottom: 18vh;
+        bottom: 0px;
+        transform: scale(1.4);
         z-index: 4;
     }
 
-    #hitter{
-        bottom: 30vh;
-        left: 5vw;
-        transform: rotateY(180deg);
+    #setter{
+        padding-bottom: 13vh;
+        bottom: 0px;
+        transform: scale(1.3);
+        margin-left: 60vw;
+        left: 0px;
         z-index: 5;
+    }
+
+    #hitter{
+        padding-bottom: 30vh;
+        bottom: 0px;
+        margin-left: 5vw;
+        left: 0px;
+        transform: rotateY(180deg);
+        z-index: 6;
     }
     
     #block_male{
-        bottom: 25vh;
-        right: 47vw;
+        padding-bottom: 22vh;
+        bottom: 0px;
+        margin-right: 50vw;
+        right: 0px;
         transform: rotateY(180deg) scale(1.1);
         z-index: 1;
     }
 
     #block_female{
-        bottom: 20vh;
-        left: 50vw;
+        padding-bottom: 20vh;
+        bottom: 0px;
+        margin-left: 50vw;
+        left: 0px;
         transform: rotateY(180deg) scale(0.8);
         z-index: 2;
     }
@@ -289,9 +306,11 @@ button:active{
     }
 
     #ball{
-        bottom: 50vh;
-        left: 20vw;
-        z-index: 3;
+        padding-bottom: 90vh;
+        bottom: 0px;
+        margin-left: 20vw;
+        left: 0px;
+        z-index: 7;
         transform: scale(0.15);
     }
 }

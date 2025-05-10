@@ -1,9 +1,9 @@
 const general = document.getElementById("general");
-const hobbies = document.getElementById("hobbies");
+const volleyball = document.getElementById("volleyball");
 const travel = document.getElementById("travel");
 
 const generalButton = document.getElementById("general-button");
-const hobbiesButton = document.getElementById("hobbies-button");
+const volleyballButton = document.getElementById("volleyball-button");
 const travelButton = document.getElementById("travel-button");
 
 generalButton.onclick=()=>{
@@ -13,9 +13,9 @@ generalButton.onclick=()=>{
     });
 }
 
-hobbiesButton.onclick=()=>{
+volleyballButton.onclick=()=>{
     window.scroll({
-        top: window.scrollY + hobbies.getBoundingClientRect().top - 100,
+        top: window.scrollY + volleyball.getBoundingClientRect().top - 100,
         behavior:"smooth",
     });
 }
